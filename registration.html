@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Welcome to DXC-Registration Form</title>
+</head>
+
+    <body bgcolor="pink" text="black">
+        <h2><center>Registration Form</center></h2>
+        <form>
+            <table cellspacing="10" cellpadding="10" align="center">
+                <tr>
+                    <td>User Name</td><td><input type="text" name="username" id="username"/></td>
+                </tr>
+                <tr>
+                    <td>Password </td><td><input type="password" name="password" id="password"/></td>
+                </tr>
+                <tr>
+                        <td>Confirm Password </td><td><input type="password" name="confirmpassword" id="confirmpassword"/></td>
+                </tr>
+                <tr>
+                        <td>Full Name</td><td><input type="text" name="fullname" id="fullname"/></td>
+                </tr>
+                <tr>
+                        <td>Gender </td><td><input type="radio" name="gender" id="gender" value="male"/>Male
+                            <input type="radio" name="gender" id="gender" value="female"/>Female
+                            <input type="radio" name="gender" id="gender" value="others"/>Others</td>
+                </tr>
+                <tr>
+                        <td>Qualification</td><td><select name="qualification" id="qualification">
+                            <option value="MCA">MCA</option>
+                            <option value="MBA">MBA</option>
+                            <option value="M.Tech">M.Tech</option>
+                            
+                        </td>
+                </tr>
+                <tr>
+                        <td>Alert By </td>
+                        <td><input type="checkbox" name="alertby" id="alertby" value="mobile"/>Mobile
+                            <input type="checkbox" name="alertby" id="alertby" value="email"/>E-mail
+                            <input type="checkbox" name="alertby" id="alertby" value="letters"/>Letters</td>
+                </tr>
+
+                <tr>
+                    <td align="center"><input type="submit" value="Login">
+                    </td><td align="center"><input type="reset" value="Clear"></td>
+                </tr>
+
+            </table>
+        </form>
+    </body>
+</html>
