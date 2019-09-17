@@ -1,0 +1,42 @@
+<html>
+<head>
+        <script type="text/javascript">
+        function addnumbers()
+        {
+            var n1=document.getElementById("number1").value;
+            var n2=document.getElementById("number2").value;
+            var span1=document.getElementById("s1");
+            var span2=document.getElementById("s2");
+            var div1=document.getElementById("div1");
+        if (n1.length==0){
+            span1.innerHTML="<font color=red>Please enter number1</font>"
+            span2.innerHTML= ""
+            div1.innerHTML= ""
+        }
+        else if(n2.length==0){
+            span1.innerHTML=""
+            span2.innerHTML="<font color=red>Please enter number2</font>"
+            div1.innerHTML=""
+        }
+        else{
+            var result=parseInt(n1)+parseInt(n2)
+            span1.innerHTML=""
+            span2.innerHTML=""
+            div1.innerHTML="<font color=green>sum is </font>"+ result
+        }
+    }
+        </script>
+</head>
+
+    <body>
+        <form>
+                Number 1:<input type="text" name="number1" id="number1"><span id="s1"></span>
+                <br/>
+                Number 2:<input type="text" name="number2" id="number2">
+                <span id="s2"></span>
+                <div id="div1"></div>
+                <br/>
+                 <input type="button" value="Add" onclick="addnumbers()">
+        </form>
+    </body>
+</html>
