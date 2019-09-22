@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function addselect(inp1,sel1)
+        {
+           len1=sel1.options.length
+           op1=new Option(inp1.value,inp1.value)
+           sel1.options[len1]=op1
+        }
+        function checkout(guestlist,checkoutlist)
+        {
+           i=guestlist.options.selectedIndex
+           var a=guestlist.options[i]
+
+           len2=checkoutlist.options.length
+           var op2=new Option(a.value,a.value)
+           checkoutlist.options[len2]=op2
+
+            len3 = guestlist.options.length;
+            for (i = 0; i < len3; i++) {
+                if (guestlist.options[i].value == op2.value) {
+                    guestlist.options[i] = null;
+                    break;
+                }
+            }
+        }
+            </script>
+    </head>
+    <body>
+        <form>
+            Guest Name<input type="text" name="abc" onblur="addselect(this,this.form.guestlist)">
+            <select id="guestlist" value="guestlist">
+                <option value="---">Guest Details</option>
+            </select>
+            <input type="button" value="checkout" name="abc" onclick="checkout(this.form.guestlist,this.form.checkoutlist)">
+            <select id="checkoutlist" value="checkoutlist">
+                <option value="---">Checkout List</option>
+            </select>
+        </form>
+    </body>
+</html>
