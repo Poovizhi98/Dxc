@@ -1,0 +1,26 @@
+<html>
+    <head>
+    <script type="text/javascript">
+    function enable()
+    {
+        var a= document.getElementById("accept");
+        if(a.checked==true)
+        {
+            document.getElementById("submit").disabled=false;
+        }
+    }
+</script>
+    <style type="text/css">
+    #accept,#submit{
+        margin:10px;
+    }
+    </style>
+
+    </head>
+    <body>
+        <form>
+            <input type="checkbox" id="accept" value="I_accept" onclick="enable()">I accept<br/>
+            <input type="submit" id="submit" value="Submit" disabled >
+        </form>
+    </body>
+</html>
