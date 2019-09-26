@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#slide").click(function()
+                {
+                    $("#flip").slideToggle("fast")
+                })
+            }
+            )
+        </script>
+            <style type="text/css">
+                #slide,#flip{
+                    text-align:center;
+                    background-color:greenyellow;
+                    height:50px;
+                    padding:25px;
+                    opacity: 0.5px;
+                    border:solid black;
+                }
+                #flip{
+                    display:none;
+                    background-color:plum; 
+                }
+            </style>
+    </head>
+    <body>
+        <div id="slide">Click here to slide down panel</div>
+        <div id="flip">Enjoy</div>
+    </body>
+</html>

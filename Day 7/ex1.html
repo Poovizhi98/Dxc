@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+        function keepchange(){
+            var a=document.getElementById("txt").value;
+            var len=a.length;
+            var div=document.getElementById("update");
+            var res=parseInt(15)-parseInt(len);
+            div.innerHTML="Remaining " + res + " characters";
+        }
+        </script>
+        <style type="text/css">
+        div{
+            text-align: center;
+            margin: 19px;
+        }
+        textarea{
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        </style>
+    </head>
+    <body>
+        <div>Maximum 15 characters</div>
+        <textarea id="txt" minlength="1" maxlength="15" onkeyup="keepchange()"></textarea>
+        <div id="update">Remaining 15 characters</div>
+    </body>
+</html>

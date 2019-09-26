@@ -1,0 +1,29 @@
+<html>
+    <head>
+         <script type="text/javascript">
+         function validate()
+         {
+             var usrname=document.getElementById("uname").value;
+             var pasword=document.getElementById("password").value;
+             var mblenum=document.getElementById("num").value;
+             if(usrname.length!=0){
+                document.getElementById("submit").disabled=false;
+             }
+             if(pasword.length>0 || pasword.length<=6){
+                document.getElementById("submit").disabled=false;
+             }
+             if(mblenum.length!=10){
+                document.getElementById("submit").disabled=false;
+             }
+         }
+         </script>
+    </head>
+    <body>
+        <form >
+            Username:<input type="text" name="uname" id="unmae">
+            Password:<input type="password" name="password" id="password">
+            Mobile number:<input type="number" name="num" id="num">
+            <input type="submit" id="submit" value="Submit" disabled onclick="validate()">
+        </form>
+    </body>
+</html>
